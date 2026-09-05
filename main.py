@@ -60,6 +60,7 @@ def esconder_tudo():
     botao_favoritar.pack_forget()
     botao_remover.pack_forget()
     botao_voltar.pack_forget()
+    botao_menu.pack_forget()
 
 
 def iniciar():
@@ -75,6 +76,7 @@ def iniciar():
 
     botao_voltar.configure(command=voltar_inicio)
     botao_voltar.pack(pady=10)
+    botao_menu.pack(pady=10)
 
 
 def continuar():
@@ -95,8 +97,10 @@ def continuar():
     interesse6.pack(pady=5)
 
     botao_interesses.pack(pady=20)
+
     botao_voltar.configure(command=voltar_dados)
     botao_voltar.pack(pady=10)
+    botao_menu.pack(pady=10)
 
 
 def interesses():
@@ -115,8 +119,10 @@ def interesses():
     objetivo4.pack(pady=5)
 
     botao_match.pack(pady=20)
+
     botao_voltar.configure(command=voltar_interesses)
     botao_voltar.pack(pady=10)
+    botao_menu.pack(pady=10)
 
 
 def encontrar_match():
@@ -178,17 +184,15 @@ def encontrar_match():
     titulo.configure(text="Seu Match")
     subtitulo.configure(text="Encontramos uma pessoa que pode combinar com você:")
 
-    resultado.configure(
-        text=f"João - Engenharia de Software\n\n"
-             f"Interesses em comum: {interesses}\n"
-             f"Objetivos em comum: {objetivos}"
-             )
+    resultado.configure(text=f"João - Engenharia de Software\n\n"
+                             f"Interesses em comum: {interesses}\n"
+                             f"Objetivos em comum: {objetivos}")
 
     resultado.pack(pady=30)
     botao_favoritar.pack(pady=10)
-
     botao_voltar.configure(command=voltar_objetivos)
     botao_voltar.pack(pady=10)
+    botao_menu.pack(pady=10)
 
 
 def favoritar():
@@ -243,6 +247,7 @@ def voltar_dados():
 
     botao_voltar.configure(command=voltar_inicio)
     botao_voltar.pack(pady=10)
+    botao_menu.pack(pady=10)
 
 
 def voltar_interesses():
@@ -259,8 +264,10 @@ def voltar_interesses():
     interesse6.pack(pady=5)
 
     botao_interesses.pack(pady=20)
+
     botao_voltar.configure(command=voltar_dados)
     botao_voltar.pack(pady=10)
+    botao_menu.pack(pady=10)
 
 
 def voltar_objetivos():
@@ -275,8 +282,10 @@ def voltar_objetivos():
     objetivo4.pack(pady=5)
 
     botao_match.pack(pady=20)
+
     botao_voltar.configure(command=voltar_interesses)
     botao_voltar.pack(pady=10)
+    botao_menu.pack(pady=10)
 
 
 botao = ctk.CTkButton(root, text="Começar", command=iniciar)
@@ -291,5 +300,6 @@ botao_match = ctk.CTkButton(root, text="Encontrar meu Match", command=encontrar_
 botao_favoritar = ctk.CTkButton(root, text="Favoritar", command=favoritar)
 botao_remover = ctk.CTkButton(root, text="Remover favorito", command=remover_favorito)
 botao_voltar = ctk.CTkButton(root, text="Voltar")
+botao_menu = ctk.CTkButton(root, text="Menu Principal", command=voltar_inicio)
 
 root.mainloop()
