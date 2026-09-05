@@ -184,9 +184,7 @@ def encontrar_match():
     titulo.configure(text="Seu Match")
     subtitulo.configure(text="Encontramos uma pessoa que pode combinar com você:")
 
-    resultado.configure(text=f"João - Engenharia de Software\n\n"
-                             f"Interesses em comum: {interesses}\n"
-                             f"Objetivos em comum: {objetivos}")
+    resultado.configure(text=f"João - Engenharia de Software\n\n" f"Interesses em comum: {interesses}\n" f"Objetivos em comum: {objetivos}")
 
     resultado.pack(pady=30)
     botao_favoritar.pack(pady=10)
